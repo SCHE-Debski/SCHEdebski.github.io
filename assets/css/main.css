@@ -1025,7 +1025,10 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
-		white-space: nowrap;
+		/* Allow wrapping on small screens */
+		overflow-wrap: anywhere;
+		word-break: break-word;
+		white-space: normal;
 	}
 
 		input[type="submit"]:hover,
@@ -1058,6 +1061,24 @@ input, select, textarea {
 		button.fit,
 		.button.fit {
 			width: 100%;
+		}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 480px) {
+	input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+		font-size: 0.75rem;
+		padding: 0 0.8rem;
+		height: auto;
+		line-height: 1.4;
+		white-space: normal;
+		overflow-wrap: anywhere;
+		word-break: break-word;
+	}
+
+	.button.icon:before {
+		margin-right: 0.4em;
+	}
+}
 		}
 
 		input[type="submit"].small,
