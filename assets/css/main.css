@@ -1741,7 +1741,8 @@ input, select, textarea {
 		overflow-wrap: anywhere !important;
 		word-break: break-word !important;
 		hyphens: auto !important;
-		line-height: 1.25 !important;
+		line-height: 1.4 !important;
+		letter-spacing: 0.06rem !important;
 		padding: 0.5rem 0.75rem !important;
 		height: auto !important;
 		min-height: 2.25rem !important;
